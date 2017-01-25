@@ -11,4 +11,5 @@ public class LoginController {
 	    @FXML protected void loginAction(ActionEvent event) {
 	    	JOptionPane.showMessageDialog(null, "Login","Login", JOptionPane.INFORMATION_MESSAGE);
 	    }
+	    
 }
