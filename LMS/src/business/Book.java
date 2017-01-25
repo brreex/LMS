@@ -1,18 +1,20 @@
 package business;
 
 public class Book extends Publication{
-	private int ISBN;
+	private String ISBN;
 	private int bookType;
+	
+	
 	
 	enum BookType {
 		Standard, Special
 	}
 
-	public int getISBN() {
+	public String getISBN() {
 		return ISBN;
 	}
 
-	public void setISBN(int iSBN) {
+	public void setISBN(String iSBN) {
 		ISBN = iSBN;
 	}
 
@@ -23,6 +25,5 @@ public class Book extends Publication{
 	public void setBookType(int bookType) {
 		this.bookType = bookType;
 	}
-	
 	
 }

@@ -1,16 +1,20 @@
 package business;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 123L;
 	private String fname;
 	private String lname;
 	Address address;
 	public Person() {
 	}
-	public Person(String fname, String lname, String street,
-			String city,String state,int zip,String phone,String email) {
+	public Person(String fname, String lname, Address add) {
 		this.fname = fname;
 		this.lname = lname;
-		Address add = new Address(street, city, state, zip, phone, email);
 		this.address = add;
 	}
 	public String getFname() {
