@@ -1,6 +1,7 @@
 package dataaccess;
 
 import java.util.HashMap;
+import java.util.List;
 
 import business.*;
 
@@ -19,4 +20,6 @@ public interface  DataAccess {
 		public boolean memberExists(String MemebrID);
 		public void updateBook(Book book);
 		public HashMap<String, Member> readMemberMap();
+		public HashMap<String, CheckoutRecord> memberRecord();
+		public List<Member> getMembers();
 }

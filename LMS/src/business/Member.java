@@ -1,6 +1,7 @@
 package business;
 
 import java.io.Serializable;
+import java.util.HashMap;
 
 import dataaccess.DataAccessFacade;
 
@@ -39,7 +40,6 @@ public class Member extends Person implements Serializable{
 	public void setCheckoutRecord(CheckoutRecord checkoutRecord) {
 		this.checkoutRecord = checkoutRecord;
 	}
-	
 	/**
 	 * @param mem
 	 * @throws Exception
@@ -54,5 +54,11 @@ public class Member extends Person implements Serializable{
 			dataaccess.saveMember(this);
 		}
 		
+	}
+	
+	public static HashMap<String, Member> getMembers() throws Exception{
+		DataAccessFacade dataaccess = new DataAccessFacade();
+		HashMap<String, Member> membersMap = dataaccess.readMemberMap();
+		return membersMap;
 	}
 }
