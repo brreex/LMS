@@ -5,6 +5,14 @@ import java.time.LocalDate;
 public class Periodical extends Publication {
 	private LocalDate dateOfPublication;
 	private String type;
+	private int periodical;
+	
+	public int getPeriodical() {
+		return periodical;
+	}
+	public void setPeriodical(int periodical) {
+		this.periodical = periodical;
+	}
 	public LocalDate getDateOfPublication() {
 		return dateOfPublication;
 	}

@@ -55,6 +55,4 @@ public class Address {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
 }
