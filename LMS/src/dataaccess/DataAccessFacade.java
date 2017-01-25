@@ -19,11 +19,7 @@ public class DataAccessFacade implements DataAccess {
 	public static final String OUTPUT_DIR = System.getProperty("user.dir") + "\\src\\dataaccess\\database";
 	public static final String DATE_PATTERN = "MM/dd/yyyy";
 
-	public Book searchBook(String isbn) {
-		HashMap<String,Book> booksMap =  readBooksMap();
-		Book book = booksMap.get(isbn);
-		return book;
-	}
+	
 	
 	public boolean memberExists(String MemebrID)
 	{
@@ -59,6 +55,12 @@ public class DataAccessFacade implements DataAccess {
 		String isbn = book.getISBN();
 		bookMap.put(isbn, book);
 		saveToStorage(StorageType.BOOKS, bookMap);	
+	}
+	
+	public Book searchBook(String isbn) {
+		HashMap<String,Book> booksMap =  readBooksMap();
+		Book book = booksMap.get(isbn);
+		return book;
 	}
 	
 	public void updateBook(Book book) {
