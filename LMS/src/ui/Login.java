@@ -14,7 +14,7 @@ public class Login extends Application {
 
 
 		primaryStage.setTitle("Administrator Page");
-		//primaryStage.setScene(new Scene(root, 600, 500));
+		primaryStage.setScene(new Scene(root, 600, 500));
 		primaryStage.setMaximized(true);
 		primaryStage.show();
 	}
