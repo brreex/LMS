@@ -13,7 +13,7 @@ public class Login extends Application {
 		Parent root = FXMLLoader.load(getClass().getResource("Administrator.fxml"));
 
 
-		primaryStage.setTitle("Administrator Page");
+		primaryStage.setTitle("Administrator's Page");
 		primaryStage.setScene(new Scene(root, 600, 500));
 		primaryStage.setMaximized(true);
 		primaryStage.show();
