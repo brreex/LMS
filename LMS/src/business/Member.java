@@ -46,13 +46,13 @@ public class Member extends Person implements Serializable{
 	 */
 	public void addMember(Member mem) throws Exception{
 		DataAccessFacade dataaccess = new DataAccessFacade();
-		/*Boolean alreadyExists =dataaccess.memberExists(mem.memberID);
+		Boolean alreadyExists = dataaccess.memberExists(mem.memberID);
 		if(alreadyExists){
 			throw new Exception("Member already exists !!");
 		}
-		else{*/
+		else{
 			dataaccess.saveMember(this);
-		//}
+		}
 		
 	}
 }

@@ -57,9 +57,11 @@ public class AdministratorController {
 			Address add = new Address(street,city,state,zip,phoneno,email);
 			Member mem = new Member(memberID,firstName, lastName, add);
 			mem.addMember(mem);
+			JOptionPane.showMessageDialog(null,"Member Added".toString(),"Add Member", JOptionPane.INFORMATION_MESSAGE);
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null,e.getMessage().toString(),"Add Member", JOptionPane.INFORMATION_MESSAGE);
 		}
+		
 	}
 	
 	@FXML
