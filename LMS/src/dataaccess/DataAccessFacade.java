@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import business.Book;
+import business.CheckoutRecord;
 import business.Member;
 import business.User;
 
@@ -45,7 +46,7 @@ public class DataAccessFacade implements DataAccess {
 	
 	
 	public void saveMember(Member Member) {
-		HashMap<String, Member> MemberMap =readMemberMap();
+		HashMap<String, Member> MemberMap = readMemberMap();
 		if(MemberMap == null)
 			MemberMap = new HashMap<String,Member>();
 		
@@ -142,6 +143,16 @@ public class DataAccessFacade implements DataAccess {
 	public void updateMember(Member member) {
 		
 		
+	}
+	@Override
+	public HashMap<String, CheckoutRecord> memberRecord() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Member> getMembers() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

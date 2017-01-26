@@ -1,5 +1,9 @@
 package business;
 
+import java.util.HashMap;
+
+import dataaccess.DataAccessFacade;
+
 public class Book extends Publication{
 	private String ISBN;
 	private int bookType;
@@ -26,4 +30,9 @@ public class Book extends Publication{
 		this.bookType = bookType;
 	}
 	
+	public static HashMap<String, Book> getBooks() throws Exception{
+		DataAccessFacade dataaccess = new DataAccessFacade();
+		HashMap<String, Book> booksMap = dataaccess.readBooksMap();
+		return booksMap;
+	}
 }

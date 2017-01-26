@@ -12,8 +12,8 @@ public class Login extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getResource("Administrator.fxml"));
 		primaryStage.setTitle("Administrator Page");
-		primaryStage.setScene(new Scene(root, 600, 500));
-		primaryStage.setMaximized(true);
+		primaryStage.setScene(new Scene(root, 1042, 686));
+		//primaryStage.setMaximized(true);
 		primaryStage.show();
 	}
 
