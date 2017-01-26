@@ -1,8 +1,13 @@
 package business;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Author {
+public class Author extends Person{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1112L;
 	private boolean credential;
 	private String bio;
 	private List<Publication> publication;
@@ -10,10 +15,12 @@ public class Author {
 	public Author() {
 	}
 
-	public Author(boolean credential, String bio, List<Publication> publication) {
+	public Author(String firstname, String lastname, String phoneno, boolean credential, String bio, Publication publication, Address adr) {
+		super(firstname,lastname,adr);
 		this.credential = credential;
 		this.bio = bio;
-		this.publication = publication;
+		this.publication = new ArrayList<>();
+		this.publication.add(publication);
 	}
 
 	public boolean isCredential() {
